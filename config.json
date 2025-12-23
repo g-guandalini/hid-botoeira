@@ -1,0 +1,38 @@
+{
+    "TARGET_VENDOR_ID": "0x0079",
+    "TARGET_PRODUCT_ID": "0x0006",
+    "BUTTON_CONFIGS": [
+      {
+        "byte_index": 5,
+        "idle_value": 15,
+        "actions": {
+          "31": {"name": "Botão A (Byte 5)", "key": "1"},
+          "47": {"name": "Botão B (Byte 5)", "key": "2"},
+          "79": {"name": "Botão C (Byte 5)", "key": "3"},
+          "143": {"name": "Botão D (Byte 5)", "key": "4"},
+          "4": {"name": "Botão Seta Baixo (Byte 5)", "key": "5"}
+        }
+      },
+      {
+        "byte_index": 0,
+        "idle_value": 127,
+        "actions": {
+          "0": {"name": "Botão Esquerdo (Byte 0)", "key": "esquerda"},
+          "255": {"name": "Botão Direito (Byte 0)", "key": "direita"}
+        }
+      },
+      {
+        "byte_index": 1,
+        "idle_value": 127,
+        "actions": {
+          "0": {"name": "Botão Cima (Byte 1)", "key": "cima"},
+          "255": {"name": "Botão Baixo (Byte 1)", "key": "baixo"}
+        }
+      }
+    ],
+    "UNLOCK_KEY_NAMES": [
+      "ctrl_l",
+      "shift_l",
+      "delete"
+    ]
+}
