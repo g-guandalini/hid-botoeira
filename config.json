@@ -1,38 +1,64 @@
 {
-    "TARGET_VENDOR_ID": "0x0079",
-    "TARGET_PRODUCT_ID": "0x0006",
-    "BUTTON_CONFIGS": [
-      {
-        "byte_index": 5,
-        "idle_value": 15,
-        "actions": {
-          "31": {"name": "Botão A (Byte 5)", "key": "1"},
-          "47": {"name": "Botão B (Byte 5)", "key": "2"},
-          "79": {"name": "Botão C (Byte 5)", "key": "3"},
-          "143": {"name": "Botão D (Byte 5)", "key": "4"},
-          "4": {"name": "Botão Seta Baixo (Byte 5)", "key": "5"}
+    "TARGET_VENDOR_ID": "0x045e",
+    "TARGET_PRODUCT_ID": "0x028e",
+    "MAPPINGS": [
+        {
+            "name": "Botão X (Byte 11 - Valor 4)",
+            "type": "digital",
+            "byte_index": 11,
+            "idle_value": 0,
+            "press_value": 4,
+            "key": "1"
+        },
+        {
+            "name": "Botão Y (Byte 11 - Valor 2)",
+            "type": "digital",
+            "byte_index": 11,
+            "idle_value": 0,
+            "press_value": 2,
+            "key": "2"
+        },
+        {
+            "name": "Botão Z (Byte 11 - Valor 8)",
+            "type": "digital",
+            "byte_index": 11,
+            "idle_value": 0,
+            "press_value": 8,
+            "key": "3"
+        },
+        {
+            "name": "Left Trigger (LT) - Gatilho Esquerdo Traseiro",
+            "type": "compound_digital",
+            "conditions_to_be_active": [
+                {"byte_index": 9, "value_is": 128},
+                {"byte_index": 10, "value_is": 0}
+            ],
+            "key": "8"
+        },
+        {
+            "name": "Right Trigger (RT) - Gatilho Direito Traseiro",
+            "type": "compound_digital",
+            "conditions_to_be_active": [
+                {"byte_index": 9, "value_is": 128},
+                {"byte_index": 10, "value_is": 255}
+            ],
+            "key": "9"
+        },
+        {
+            "name": "Right Bumper (RB) - Botão Frontal Direito",
+            "type": "digital",
+            "byte_index": 11,
+            "idle_value": 0,
+            "press_value": 32,
+            "key": "r"
+        },
+        {
+            "name": "Left Bumper (LB) - Botão Frontal Esquerdo",
+            "type": "digital",
+            "byte_index": 11,
+            "idle_value": 0,
+            "press_value": 16,
+            "key": "l"
         }
-      },
-      {
-        "byte_index": 0,
-        "idle_value": 127,
-        "actions": {
-          "0": {"name": "Botão Esquerdo (Byte 0)", "key": "esquerda"},
-          "255": {"name": "Botão Direito (Byte 0)", "key": "direita"}
-        }
-      },
-      {
-        "byte_index": 1,
-        "idle_value": 127,
-        "actions": {
-          "0": {"name": "Botão Cima (Byte 1)", "key": "cima"},
-          "255": {"name": "Botão Baixo (Byte 1)", "key": "baixo"}
-        }
-      }
-    ],
-    "UNLOCK_KEY_NAMES": [
-      "ctrl_l",
-      "shift_l",
-      "delete"
     ]
 }
